@@ -1,0 +1,141 @@
+<html>
+    <head>
+<title>KwikJobs Web</title>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-amber.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<link rel="stylesheet" href="./style.css" />
+    </head>
+
+
+    <body>
+<!-- LOGIN DIALOG -->
+<dialog id="loginDialog" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Sign In</h4>
+        <div class="mdl-dialog__content">
+          <p id="loginError"></p>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginEmail">
+            <label class="mdl-textfield__label" for="sample3">Email...</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginPassword">
+            <label class="mdl-textfield__label" for="sample3">Password...</label>
+          </div>
+        </div>
+        <div class="mdl-dialog__actions">
+          <!-- Colored raised button -->
+          <button id="loginBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            Sign In
+          </button>
+          <!-- MDL Spinner Component -->
+          <div id="loginProgress" class="mdl-spinner mdl-js-spinner is-active"></div>
+        </div>
+      </dialog>
+
+
+
+
+
+
+
+
+        
+        <div class="login-cover">
+            <!-- MDL Spinner Component -->
+            <div class="page-loader mdl-spinner mdl-js-spinner is-active"></div>
+          </div>
+        
+          <!-- MAIN CONTENT-->
+<div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout-icon"></div>
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout__title">KwikJobs
+          <span class="page-title-span"> | </span>
+          <span class="page-title-span"> Payment Page </span>
+        </span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <button id="signOutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            Sign Out <i class="button-right-icon material-icons">account_circle</i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+
+
+        <!-- PAYMENT FORMS -->
+<dialog id="PaymentDialog" class="mdl-dialog">
+  <h4 class="mdl-dialog__title">Payment Form</h4>
+  <div class="mdl-dialog__content">
+    <p id="loginError"></p>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="workersPublicAddress">
+      <label class="mdl-textfield__label" for="sample3">Workers Public Address...</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="amount">
+      <label class="mdl-textfield__label" for="sample3">Value...</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="workersId">
+      <label class="mdl-textfield__label" for="sample3">WorkersId...</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="timeMilli">
+      <label class="mdl-textfield__label" for="sample3">TimeMili...</label>
+    </div>
+
+  </div>
+  <div class="mdl-dialog__actions">
+    <!-- Colored raised button -->
+    <button id="paymentButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+     Make Payment
+    </button>
+    <!-- MDL Spinner Component -->
+    <div id="loginProgress" class="mdl-spinner mdl-js-spinner is-active"></div>
+  </div>
+</dialog>
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyABQN1kjTHa4zTp2VdI1eB3mj0IaEA50iA",
+    authDomain: "flutterblogapp-7e511.firebaseapp.com",
+    databaseURL: "https://flutterblogapp-7e511.firebaseio.com",
+    projectId: "flutterblogapp-7e511",
+    storageBucket: "flutterblogapp-7e511.appspot.com",
+    messagingSenderId: "182649576923",
+    appId: "1:182649576923:web:8b1b0b7e25ebcb1f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+  <script src="aepp-sdk.browser.js"></script>
+  <script src="index.js"></script>
+
+  <!-- <script id="template" type="x-tmpl-mustache"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js">s</script>
+
+    </body>
+</html>
